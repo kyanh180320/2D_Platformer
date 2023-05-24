@@ -13,16 +13,20 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     bool canJumpDouble;
     private Animator anim;
+    private SpriteRenderer theSR;
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        theSR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(speed * Input.GetAxis("Horizontal"), rb.velocity.y);
+        float horizontal = Input.GetAxis("Horizontal");
+     
+        rb.velocity = new Vector2(speed * horizontal, rb.velocity.y);
         isGrounded = Physics2D.OverlapCircle(groundCheckpoint.position, 0.2f, whatIsGround);
 
         if (Input.GetButtonDown("Jump"))
@@ -40,6 +44,14 @@ public class PlayerController : MonoBehaviour
                     canJumpDouble = false;
                 }
             }
+        }
+        if (rb.velocity.x > 0)
+        {
+            theSR.flipX = false;
+        }
+        else if(rb.velocity.x < 0)
+        {
+            theSR.flipX =true;
         }
         anim.SetFloat("moveSpeed",Mathf.Abs(rb.velocity.x));
         anim.SetBool("isGrounded", isGrounded);
