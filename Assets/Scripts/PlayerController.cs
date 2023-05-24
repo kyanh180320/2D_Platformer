@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     bool isGrounded;
     bool canJumpDouble;
+    private Animator anim;
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -39,5 +41,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        anim.SetFloat("moveSpeed",Mathf.Abs(rb.velocity.x));
+        anim.SetBool("isGrounded", isGrounded);
     }
 }
