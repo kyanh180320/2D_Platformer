@@ -10,31 +10,30 @@ public class CameraController : MonoBehaviour
     public Transform middleBackground;
     public float minHeight;
     public float maxHeight;
-    private Vector3 startPos;
-    private float lastXPos;
-   
+    private Vector2 lastPos;
+
     void Start()
     {
-        startPos = farBackground.position;
-        lastXPos = transform.position.x;
+        lastPos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x,Mathf.Clamp(target.position.y,minHeight,maxHeight),transform.position.z);
+        transform.position = new Vector3(target.position.x, Mathf.Clamp(target.position.y, minHeight, maxHeight), transform.position.z);
 
-        float amountX = transform.position.x - lastXPos;
+        Vector2 amoutToMove = new Vector2(transform.position.x - lastPos.x, transform.position.y - lastPos.y);
 
-        farBackground.position += new Vector3(amountX, 0, 0);
-        middleBackground.position += new Vector3(0.5f * amountX, 0, 0);
+        farBackground.position += new Vector3(amoutToMove.x, amoutToMove.y, 0);
+        middleBackground.position += new Vector3(amoutToMove.x, amoutToMove.y, 0) * 0.5f;
 
-        lastXPos = transform.position.x;
+        lastPos = transform.position;
 
-        //Different Way
+
+        //Different Way Background Parralax horizontal
         //transform.position = new Vector3(target.position.x, transform.position.y, transform.position.z);
         //farBackground.position = new Vector3(target.position.x, transform.position.y,0);
         //middleBackground.position = new Vector3(target.position.x * 0.5f, transform.position.y, 0);
-       
+
     }
 }
