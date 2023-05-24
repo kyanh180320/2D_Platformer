@@ -489,6 +489,8 @@ MonoBehaviour:
   target: {fileID: 104300248}
   farBackground: {fileID: 270509996}
   middleBackground: {fileID: 99542106}
+  minHeight: -1.5
+  maxHeight: 2.5
 --- !u!1 &603077681
 GameObject:
   m_ObjectHideFlags: 0
