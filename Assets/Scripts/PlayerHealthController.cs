@@ -19,14 +19,17 @@ public class PlayerHealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void DealDamge()
     {
         currentHealth--;
-        if (currentHealth <= 0 )
+        UIController.instance.UpdateHealthDisplay();
+
+        if (currentHealth <= 0)
         {
-            gameObject.SetActive( false );
+            gameObject.SetActive(false);
         }
     }
+
 }

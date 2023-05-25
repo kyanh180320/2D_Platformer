@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 3
+  maxHealth: 6
 --- !u!1 &1148043233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,6 +5606,7 @@ GameObject:
   - component: {fileID: 1310741966}
   - component: {fileID: 1310741965}
   - component: {fileID: 1310741964}
+  - component: {fileID: 1310741968}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5697,6 +5698,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1310741968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310741963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edbfeaff3147e7244b0db22a5778db1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart1: {fileID: 326467702}
+  heart2: {fileID: 1858045543}
+  heart3: {fileID: 2051668492}
+  heartFull: {fileID: 8109154662235370213, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
+  heartEmpty: {fileID: -4390673095631447188, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
+  heartHalf: {fileID: 2139837793675082937, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
 --- !u!1 &1515519082
 GameObject:
   m_ObjectHideFlags: 0
