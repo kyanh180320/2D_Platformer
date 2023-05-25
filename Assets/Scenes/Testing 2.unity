@@ -396,6 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 6
+  invincibleLength: 1
 --- !u!1 &1148043233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5800,6 +5801,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 918240799}
     - target: {fileID: 1852685195459960260, guid: 74acd52ecf9998647abb705d32f8164d, type: 3}
+      propertyPath: minHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852685195459960260, guid: 74acd52ecf9998647abb705d32f8164d, type: 3}
       propertyPath: farBackground
       value: 
       objectReference: {fileID: 490300901}
@@ -5817,7 +5822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1852685195459960261, guid: 74acd52ecf9998647abb705d32f8164d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1852685195459960261, guid: 74acd52ecf9998647abb705d32f8164d, type: 3}
       propertyPath: m_LocalPosition.z
