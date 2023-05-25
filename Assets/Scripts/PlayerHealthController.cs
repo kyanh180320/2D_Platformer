@@ -9,6 +9,7 @@ public class PlayerHealthController : MonoBehaviour
     public int currentHealth, maxHealth;
     public float invincibleLength;
     private float invincibleCounter;
+    private SpriteRenderer theSR;
     private void Awake()
     {
         instance = this;
@@ -16,6 +17,7 @@ public class PlayerHealthController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        theSR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,10 +27,16 @@ public class PlayerHealthController : MonoBehaviour
         {
             invincibleCounter -= Time.deltaTime;
         }
+        else
+        {
+            theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b, 1f);
+        }
     }
     public void DealDamge()
     {
-        if(invincibleCounter <= 0) // bat tu trong 1s
+        print(invincibleCounter);
+
+        if (invincibleCounter <= 0) // bat tu trong 1s
         {
             currentHealth--;
 
@@ -36,13 +44,14 @@ public class PlayerHealthController : MonoBehaviour
             {
                 gameObject.SetActive(false);
             }
-            else
+            else // state invincible
             {
                 invincibleCounter = invincibleLength;
+                theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b, .5f);
             }
             UIController.instance.UpdateHealthDisplay();
         }
-        
+
 
     }
 
