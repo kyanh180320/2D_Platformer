@@ -5,15 +5,25 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static PlayerController instance;
     Rigidbody2D rb;
     public float speed;
     public float jumpForce;
+
     public Transform groundCheckpoint;
     public LayerMask whatIsGround;
     bool isGrounded;
     bool canJumpDouble;
+
     private Animator anim;
     private SpriteRenderer theSR;
+
+    public float knockBackLength, knockBackSpeed;
+    private float knockBakcCounter;
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -55,5 +65,9 @@ public class PlayerController : MonoBehaviour
         }
         anim.SetFloat("moveSpeed",Mathf.Abs(rb.velocity.x));
         anim.SetBool("isGrounded", isGrounded);
+    }
+    public void KnockBack()
+    {
+        knockBakcCounter = knockBackLength;
     }
 }
