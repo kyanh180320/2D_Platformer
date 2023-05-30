@@ -36,7 +36,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         print(invincibleCounter);
 
-        if (invincibleCounter <= 0) // bat tu trong 1s
+        if (invincibleCounter <= 0) // trang thai khong bat tu
         {
             currentHealth--;
 
@@ -44,7 +44,7 @@ public class PlayerHealthController : MonoBehaviour
             {
                 gameObject.SetActive(false);
             }
-            else // state invincible
+            else // state invincible , invincibleCounter > 0 change color
             {
                 invincibleCounter = invincibleLength;
                 theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b, .5f);
