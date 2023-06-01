@@ -42,7 +42,8 @@ public class PlayerHealthController : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
+                LevelManager.instance.RespawnPlayer();
             }
             else // state invincible , invincibleCounter > 0 change color
             {
