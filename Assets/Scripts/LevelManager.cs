@@ -7,13 +7,14 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     public float waitToSpawn;
     public static LevelManager instance;
+    public int gemsCollected;
     private void Awake()
     {
         instance = this;
     }
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
