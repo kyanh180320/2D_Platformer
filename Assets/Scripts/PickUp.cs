@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour
     private bool isCollected;
     public bool isGem;
     public bool isHeal;
+    public GameObject pickupEffect;
     void Start()
     {
 
@@ -28,14 +29,21 @@ public class PickUp : MonoBehaviour
                 UIController.instance.UpdateGemCount();
                 isCollected = true;
                 Destroy(gameObject);
+                PickUpEffect();
             }
             if(isHeal)
             {
                 PlayerHealthController.instance.HealPlayer();
                 isCollected = true;
                 Destroy(gameObject);
+                PickUpEffect();
+
             }
-           
+
         }
+    }
+    public void PickUpEffect()
+    {
+        Instantiate(pickupEffect,transform.position, Quaternion.identity);
     }
 }
