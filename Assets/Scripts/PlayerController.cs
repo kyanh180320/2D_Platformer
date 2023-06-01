@@ -86,5 +86,6 @@ public class PlayerController : MonoBehaviour
     {
         knockBakcCounter = knockBackLength;
         rb.velocity = new Vector2(0, knockBackForce);
+        anim.SetTrigger("hurt");
     }
 }
