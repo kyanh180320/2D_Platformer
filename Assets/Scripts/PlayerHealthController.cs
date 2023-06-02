@@ -7,6 +7,7 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     public static PlayerHealthController instance;
     public int currentHealth, maxHealth;
+    public GameObject deathEffect;
     public float invincibleLength;
     private float invincibleCounter;
     private SpriteRenderer theSR;
@@ -43,6 +44,7 @@ public class PlayerHealthController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 //gameObject.SetActive(false);
+                Instantiate(deathEffect,transform.position, Quaternion.identity);
                 LevelManager.instance.RespawnPlayer();
             }
             else // state invincible , invincibleCounter > 0 change color

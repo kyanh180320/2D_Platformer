@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         UpdateGemCount();
+        UpdateHealthDisplay();
     }
 
     // Update is called once per frame

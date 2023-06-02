@@ -433,63 +433,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4453541276710381489, guid: f622c32f87514a8449440dda225df7f5, type: 3}
   m_PrefabInstance: {fileID: 490300899}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &699776838
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1595201526883163818, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_Name
-      value: Pickup Effect
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595201526883163823, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 14c4acc3dfbb0c54c92e5dd916579ced, type: 3}
 --- !u!1001 &789795474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -643,6 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 6
+  deathEffect: {fileID: 8250938098422822881, guid: a93867c9ad48c6c4e83208a01cd62b69, type: 3}
   invincibleLength: 1
 --- !u!61 &918240811
 BoxCollider2D:
